@@ -18,6 +18,7 @@ const speaker = (message, callback) => {
   return callback(message);
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -108,7 +109,7 @@ const removeWithAnon = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -124,6 +125,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  var arrray=[];
+  availableItems.forEach(function(value,index,array){
+    if(value.available===true){
+     arrray.push(value.name) ;
+    }
+  })
+  return arrray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,6 +150,19 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  var arrrrray=[];
+  arr.forEach(function(v,i,a){
+   if(v%3===0 && v%5===0){
+     arrrrray.push("Fizz Buzz")
+   }else if (v%3===0){
+    arrrrray.push("Fizz")
+   }else if (v%5===0){
+    arrrrray.push("Buzz")
+   }else{
+    arrrrray.push(v)
+   }
+  })
+  return arrrrray;
 };
 
 /* ------------------------------------------------------------------------------------------------
