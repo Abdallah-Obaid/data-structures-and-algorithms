@@ -134,7 +134,6 @@ let findMaleAndFemale = (data) => {
     }
     return count;
   },[]).join(" and ")
-  // console.log(arr.join(" and "), "a")
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,7 +148,6 @@ let findShortest = (data) => {
     if(ele.name.length <= count.length){
       count = ele.name;
     }
-    console.log(count)
     return count
   },data[0].name)
 };
