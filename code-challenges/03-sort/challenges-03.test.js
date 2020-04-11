@@ -8,13 +8,9 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   // Solution code here...
-  arr.sort( (a, b) => {
-    if(b < a){
-      return -1 
-    }
-    else{
-      return b > a
-  }});
+return arr.sort((a,b)=>{
+ return b-a;
+})
 
 }
 
@@ -31,9 +27,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-arr.sort( (a,b)=>{
-  return  a.toLowerCase().localeCompare(b.toLowerCase());
-});
+return arr.sort((a,b)=>{
+ return a>b ;
+})
 }
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -43,6 +39,9 @@ Write a function named sortByLength that takes in an array of strings and return
 
 const sortByLength = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    return a.length>b.length
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,6 +54,9 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   // Solution code here...
+return arr.sort((a,b)=>{
+  return a.toUpperCase()>b.toUpperCase();
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +74,10 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-};
+  return arr.sort((a,b)=>{
+    return a.price>b.price;
+    })
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -84,6 +89,9 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    return a.toString().length>b.toString().length;
+    })
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -106,6 +114,9 @@ const people = [
 
 const sortPeople = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    return a.lastName.toUpperCase()>b.lastName.toUpperCase();
+    })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,6 +131,15 @@ If two people have the same full name, the younger one should come first. Do not
 
 const sortPeopleBetter = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    if (a.lastName.toUpperCase()===b.lastName.toUpperCase() && a.firstName.toUpperCase()===b.firstName.toUpperCase()) {
+      return a.age>b.age;
+    }else if(a.lastName.toUpperCase()=== b.lastName.toUpperCase()){
+      return a.firstName.toUpperCase()>b.firstName.toUpperCase();
+    }else{
+      return a.lastName.toUpperCase()>b.lastName.toUpperCase();
+    }
+    })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -146,6 +166,34 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    if (a.dayOfWeek==='Monday'){
+     var c=  1
+    }
+    if (a.dayOfWeek==='Tuesday'){
+     var c=  2
+    }
+    if (a.dayOfWeek==='Wednesday'){
+     var c=  3
+    }
+    if (a.dayOfWeek==='Friday'){
+     var c=  4
+    }
+    if (b.dayOfWeek==='Monday'){
+      var d=  1 
+    }
+    if (b.dayOfWeek==='Tuesday'){
+      var d=  2  
+    }
+    if (b.dayOfWeek==='Wednesday'){
+      var d=  3
+    }
+    if (a.dayOfWeek==='Friday'){
+      var d=  4
+    }
+    return c>d;
+  })
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -160,6 +208,17 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  return arr.sort((a,b)=>{
+    if(a.dayOfWeek===b.dayOfWeek){
+  if ((a.start===b.start)&&(a.dayOfWeek===b.dayOfWeek)){
+   var c = a.end-a.start;
+   var d = b.end-b.start;
+   return c>d;
+  }
+  else{
+    return a.start>b.start;
+  }}
+  })  
 };
 
 /* ------------------------------------------------------------------------------------------------
