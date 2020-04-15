@@ -1,8 +1,8 @@
-# Code Challenge 10: Chaining Methods
+# Code Challenge 12: Two-dimensional arrays
 
 ## Overview
 
-There is no overview for today's challenges. Review the overviews from previous challenges, if needed.
+Read [this overview.](README.md){:target="_blank"}
 
 ## Video
 
@@ -10,14 +10,14 @@ Watch today's video from the [demo playlist.](https://www.youtube.com/playlist?l
 
 ## Demonstration
 
-There is no demonstration for today's challenges. Review the demos from previous challenges, if needed.
+Look through [these sample problems.](DEMO.md){:target="_blank"}
 
 ## Challenges
 
 1. Check out a new branch in your `data-structures-and-algorithms` repository.
 1. Make a new directory in the `code-challenges` directory of your repo named with the challenge for the day.
-1. Create a file in this new directory named `challenges-10.test.js`.
-1. Copy and paste the **entire content** of today's [code challenge](challenges-10.test.js){:target="_blank"} into the new file.
+1. Create a file in this new directory named `challenges-12.test.js`.
+1. Copy and paste the **entire content** of today's [code challenge](challenges-12.test.js){:target="_blank"} into the new file.
 1. Run `npm test` to execute the tests in the folder for today's challenge.
 1. Write code to make the tests pass, one at a time. Let the error messages guide you.
 1. Once the test is passing, refactor as needed, then move on to the next challenge.
