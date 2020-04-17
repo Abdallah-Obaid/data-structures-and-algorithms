@@ -10,6 +10,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  var arrray=[]
+  arr.forEach(element => {
+    arrray.push(element.substr(0,1))
+  });
+  return arrray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,6 +27,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  var arrrray = []
+  arr.forEach((ele)=>{
+  if(ele.includes(':)')===true){
+   arrrray.push(ele)
+  }
+  })
+  return arrrray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +46,11 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  var araah=[]
+  arr.forEach((ele)=>{
+    araah.push(ele.charAt(1)+ele.charAt(2)+ele.charAt(3)+ele.charAt(6)+ele.charAt(7)+ele.charAt(8)+ele.charAt(10)+ele.charAt(11)+ele.charAt(12)+ele.charAt(13))
+  })
+  return araah
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +63,12 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  var arrasd=[]
+  for (let i = 0; i < str.length; i++) {
+    if ((i+1)%2==0)  {
+      arrasd.push(str.charAt(i))    
+    }}
+    return arrasd.join('')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +79,13 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  var flag = true
+  arr.forEach((ele)=>{
+    if (ele.includes(":)") === false) {
+    flag=false
+    }
+  })
+  return flag
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +96,13 @@ Write a function named findAnything that takes in an array of strings, along wit
 
 const findAnything = (arr, target) => {
   // Solution code here...
+  var array=[]
+  arr.forEach((ele)=>{
+    if(ele.includes(target)){
+     array.push(ele)
+    }
+  })
+  return array
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +113,13 @@ Write a function named findEvery that takes in an array of strings, along with a
 
 const findEvery = (arr, target) => {
   // Solution code here...
+  var flag=true  
+  arr.forEach((ele)=>{
+    if(!ele.includes(target)){
+     flag=false
+    }
+  })
+  return flag
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +136,17 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 
 const unenrollBrook = (arr) => {
   // Solution code here...
+   var aefsdcas=[]
+  arr.forEach((ele1,i)=>{
+    var arrray=[]
+    ele1.forEach((ele2,i)=>{
+      if (!ele2.includes("Brook")){
+        arrray.push(ele2)
+      }
+    })
+    aefsdcas.push(arrray)
+  })
+  return aefsdcas
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,9 +172,59 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
+// const sortByDay = (arr) => {
+//   // Solution code here...
+//   var Mondayarr=[]
+//   var Tuesdayarr=[]
+//   var Wednesdayarr=[]
+//   var Thursdayarr=[]
+//   var Fridayarr=[]
+//   var Saturdayarr=[]
+//   var Sundayarr=[]
+//   var total=[]
+//   arr.forEach((ele)=>{
+
+//     if(ele.includes('Monday')){
+//       Mondayarr.push(ele)
+//     }
+//     if(ele.includes('Tuesday')){
+//       Tuesdayarr.push(ele)
+//     }
+//     if(ele.includes('Wednesday')){
+//       Wednesdayarr.push(ele)
+//     }
+//     if(ele.includes('Thursday')){
+//       Thursdayarr.push(ele)
+//     }
+//     if(ele.includes('Friday')){
+//       Fridayarr.push(ele)
+//     }
+//     if(ele.includes('Saturday')){
+//       Saturdayarr.push(ele)
+//     }
+//     if(ele.includes('Sunday')){
+//       Sundayarr.push(ele)
+//     }
+//   })
+//   total.push(Mondayarr,Tuesdayarr,Wednesdayarr,Thursdayarr,Fridayarr,Saturdayarr,Sundayarr)
+//   return total
+// };
+
+
 const sortByDay = (arr) => {
   // Solution code here...
-};
+  var array = [] 
+  daysOfWeek.forEach((day)=>{
+    var inArr = [];
+    arr.forEach(ele =>{
+      if (ele.includes(day)){
+        inArr.push(ele)
+      }
+    })
+    array.push(inArr)
+  })
+  return array;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -131,6 +236,11 @@ For example, ['abcd', 'efgh', 'ijkl', 'mnop'] returns ['a', 'f', 'k', 'p']
 
 const characterByIndex = (arr) => {
   // Solution code here...
+  var array=[]
+  arr.forEach((ele,i)=>{
+    array.push(ele.substring(i,i+1)) //or   array.push(ele[i])
+  })
+  return array
 };
 
 /* ------------------------------------------------------------------------------------------------
